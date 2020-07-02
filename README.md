@@ -13,7 +13,7 @@ Features
 --------
 
 - SPA application with React Router DOM.
-- Using server side template from CodeIgniter 4, eval'd with DOMPurify.
+- Using server side template from CodeIgniter 4, eval'd with DOMPurify it first.
 - Webpack support for [production](#production)
 
 ## Setup
