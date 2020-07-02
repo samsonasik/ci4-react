@@ -2,7 +2,7 @@
 
 ![ci build](https://github.com/samsonasik/ci4-react/workflows/ci%20build/badge.svg)
 [![Code Coverage](https://codecov.io/gh/samsonasik/ci4-react/branch/master/graph/badge.svg)](https://codecov.io/gh/samsonasik/ci4-react)
-[![Downloads](https://poser.pugx.org/samsonasik/ci4-react/downloads)](https://packagist.org/packages/samsonasik/ci4-react)
+[![Total Downloads](https://poser.pugx.org/samsonasik/ci4-react/downloads)](//packagist.org/packages/samsonasik/ci4-react)
 
 Introduction
 ------------
