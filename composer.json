@@ -1,7 +1,7 @@
 {
-	"name": "samsonasik/ci4-vue",
+	"name": "samsonasik/ci4-react",
 	"type": "project",
-	"description": "CodeIgniter4 starter app with Vue.js Integration",
+	"description": "CodeIgniter4 starter app with react.js Integration",
 	"homepage": "https://codeigniter.com",
 	"license": "MIT",
 	"authors": [
