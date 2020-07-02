@@ -24,9 +24,15 @@ Features
 composer create-project samsonasik/ci4-react
 ```
 
-*2.* Setup environment
+*2.* Enter `ci4-react` directory and copy file `env` to `.env`:
 
-Set CI_ENVIRONMENT, base url, index page in your .env file (If you don't have a .env file, you can copy first from env file: cp env .env first):
+```bash
+cd ci4-react && cp env .env
+```
+
+*3.* Configure environment
+
+Open `ci4-react/.env` and set `CI_ENVIRONMENT`, `app.baseURL`, `app.indexPage` in your .env file:
 
 ```bash
 # file .env
@@ -36,14 +42,14 @@ app.baseURL    = 'http://localhost:8080'
 app.indexPage  = ''
 ```
 
-*3.* Run PHP Development server
+*4.* Run PHP Development server
 
 ```php
 cd ci4-react
 php spark serve
 ```
 
-*3.* Open web browser http://localhost:8080
+*5.* Open web browser http://localhost:8080
 
 ## Production
 
