@@ -21,7 +21,7 @@ Features
 *1.* Run composer create-project command:
 
 ```bash
-composer create-project -sdev samsonasik/ci4-react
+composer create-project samsonasik/ci4-react
 ```
 
 *2.* Setup environment
