@@ -1,0 +1,41 @@
+{
+	"name": "samsonasik/ci4-vue",
+	"type": "project",
+	"description": "CodeIgniter4 starter app with Vue.js Integration",
+	"homepage": "https://codeigniter.com",
+	"license": "MIT",
+	"authors": [
+        {
+            "name": "Abdul Malik Ikhsan",
+            "email": "samsonasik@gmail.com",
+            "homepage": "http://samsonasik.wordpress.com",
+            "role": "Developer"
+        }
+    ],
+	"require": {
+		"php": ">=7.2",
+		"codeigniter4/framework": "^4"
+	},
+	"require-dev": {
+		"codeigniter4/codeigniter4-standard": "^1.0.1",
+		"mikey179/vfsstream": "1.6.*",
+		"phpunit/phpunit": "8.5.*"
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\": "tests",
+			"Tests\\Support\\": "tests/_support"
+		}
+	},
+	"scripts": {
+		"test": "phpunit",
+		"post-update-cmd": [
+			"@composer dump-autoload"
+		]
+	},
+	"support": {
+		"forum": "http://forum.codeigniter.com/",
+		"source": "https://github.com/codeigniter4/CodeIgniter4",
+		"slack": "https://codeigniterchat.slack.com"
+	}
+}
