@@ -20,7 +20,7 @@
     <script src="<?php echo 'https://unpkg.com/html-react-parser@0.13.0/dist/html-react-parser.'. (! $isDevelopment ? 'min.' : '') . 'js'; ?>"></script>
     <script src="<?php echo 'https://unpkg.com/react-router-dom@5.2.0/umd/react-router-dom.'. (! $isDevelopment ? 'min.' : '') . 'js'; ?>"></script>
 
-    <script src="<?php echo site_url($isDevelopment
+    <script src="<?php echo base_url($isDevelopment
             ? '/js/app.js'
             : (
                 // when after run webpack, allow to use bundled js
