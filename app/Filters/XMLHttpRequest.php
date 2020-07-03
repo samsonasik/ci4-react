@@ -6,9 +6,10 @@ use CodeIgniter\Filters\FilterInterface;
 
 class XMLHttpRequest implements FilterInterface
 {
-    public function before(RequestInterface $request)
-    {
-		$isAjax = $request->hasHeader('X-Requested-With') && $request->getHeader('X-Requested-With')->getValue() === 'XMLHttpRequest';
+	public function before(RequestInterface $request)
+	{
+		$isAjax = $request->hasHeader('X-Requested-With')
+			&& $request->getHeader('X-Requested-With')->getValue() === 'XMLHttpRequest';
 
 		if ($isAjax)
 		{
@@ -16,9 +17,9 @@ class XMLHttpRequest implements FilterInterface
 		}
 
 		return service('response')->setBody(service('renderer')->render('layout'));
-    }
+	}
 
-    public function after(RequestInterface $request, ResponseInterface $response)
-    {
-    }
+	public function after(RequestInterface $request, ResponseInterface $response)
+	{
+	}
 }
