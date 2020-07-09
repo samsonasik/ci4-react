@@ -8,10 +8,7 @@ class XMLHttpRequest implements FilterInterface
 {
 	public function before(RequestInterface $request)
 	{
-		$isAjax = $request->hasHeader('X-Requested-With')
-			&& $request->getHeader('X-Requested-With')->getValue() === 'XMLHttpRequest';
-
-		if ($isAjax)
+		if ($request->isAJAX())
 		{
 			return;
 		}
