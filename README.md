@@ -12,7 +12,7 @@ A CodeIgniter 4 Skeleton Application with react.js integration.
 Features
 --------
 
-- SPA application with React Router DOM.
+- SPA application with React Router DOM with cached pages after visited.
 - Using server side template from CodeIgniter 4, eval'd with DOMPurify it first.
 - Webpack support for [production](#production)
 

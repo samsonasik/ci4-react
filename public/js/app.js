@@ -12,6 +12,8 @@ const {
     createElement
 } = React;
 
+const pageContent = [];
+
 const Main = () => createElement(
     "main",
     null,
@@ -22,7 +24,7 @@ const Main = () => createElement(
             Route, {
                 exact: true,
                 path: "/",
-                component: createPage('Home')
+                component: createPage('home', 'Home')
             }
         ),
         createElement(
@@ -36,14 +38,14 @@ const Main = () => createElement(
             Route, {
                 exact: true,
                 path: "/contact",
-                component: createPage('Contact')
+                component: createPage('contact', 'Contact')
             }
         ),
         createElement(
             Route, {
                 exact: true,
                 path: "*",
-                component: createPage('404 Page')
+                component: createPage('404', '404 Page')
             }
         )
     )

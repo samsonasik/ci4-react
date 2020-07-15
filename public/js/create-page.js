@@ -3,13 +3,22 @@ const {
     createElement
 } = React;
 
-let createPage = (title, data = {}) => class Page extends Component {
+const pagesData = [];
+
+let createPage = (name, title, data = {}) => class Page extends Component {
     constructor(props) {
         super(props);
         this.state = Object.assign({ content: ''}, data);
     }
 
     componentDidMount() {
+        if (name in pagesData) {
+            this.setState({ content: pagesData[name].content });
+            document.title = pagesData[name].title;
+
+            return;
+        }
+
         new Promise( (resolve) => {
             fetch(
                 this.props.location.pathname,
@@ -21,9 +30,12 @@ let createPage = (title, data = {}) => class Page extends Component {
                 }
             ).then(response =>  resolve(response.text()));
         }).then(result => {
-            this.setState({
-                content: eval("`"+DOMPurify.sanitize(result)+"`")
-            });
+            let content = eval("`"+DOMPurify.sanitize(result)+"`");
+            this.setState({ content: content });
+            pagesData[name] = {
+                title: title,
+                content: content
+            };
             document.title = title;
         });
     }
