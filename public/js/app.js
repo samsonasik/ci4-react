@@ -12,8 +12,6 @@ const {
     createElement
 } = React;
 
-const pageContent = [];
-
 const Main = () => createElement(
     "main",
     null,
