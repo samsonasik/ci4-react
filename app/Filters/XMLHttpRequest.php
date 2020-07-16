@@ -6,7 +6,7 @@ use CodeIgniter\Filters\FilterInterface;
 
 class XMLHttpRequest implements FilterInterface
 {
-	public function before(RequestInterface $request)
+	public function before(RequestInterface $request, $arguments = null)
 	{
 		if ($request->isAJAX())
 		{
@@ -16,7 +16,7 @@ class XMLHttpRequest implements FilterInterface
 		return service('response')->setBody(view('layout'));
 	}
 
-	public function after(RequestInterface $request, ResponseInterface $response)
+	public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
 	{
 	}
 }
