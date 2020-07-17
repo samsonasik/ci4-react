@@ -1,6 +1,7 @@
 # Example Using react.js in CodeIgniter 4 application
 
 ![ci build](https://github.com/samsonasik/ci4-react/workflows/ci%20build/badge.svg)
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fsamsonasik%2Fci4-react%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/samsonasik/ci4-react/master)
 [![Code Coverage](https://codecov.io/gh/samsonasik/ci4-react/branch/master/graph/badge.svg)](https://codecov.io/gh/samsonasik/ci4-react)
 [![Total Downloads](https://poser.pugx.org/samsonasik/ci4-react/downloads)](//packagist.org/packages/samsonasik/ci4-react)
 
