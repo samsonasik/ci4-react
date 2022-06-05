@@ -9,23 +9,24 @@ use CodeIgniter\HTTP\ResponseInterface;
 
 class LayoutUsage implements FilterInterface
 {
-    /**
-     * @param IncomingRequest $request
-     * @param mixed|null      $arguments
-     */
-    public function before(RequestInterface $request, $arguments = null)
-    {
-        $isAPI  = $request->hasHeader('Accept') && $request->header('Accept')->getValue() === 'application/json';
-        $isAjax = $request->isAJAX();
+	/**
+	 * @param IncomingRequest $request
+	 * @param mixed|null      $arguments
+	 */
+	public function before(RequestInterface $request, $arguments = null)
+	{
+		$isAPI  = $request->hasHeader('Accept') && $request->header('Accept')->getValue() === 'application/json';
+		$isAjax = $request->isAJAX();
 
-        if ($isAPI || $isAjax) {
-            return;
-        }
+		if ($isAPI || $isAjax)
+		{
+			return;
+		}
 
-        return service('response')->setBody(view('layout'));
-    }
+		return service('response')->setBody(view('layout'));
+	}
 
-    public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
-    {
-    }
+	public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
+	{
+	}
 }
