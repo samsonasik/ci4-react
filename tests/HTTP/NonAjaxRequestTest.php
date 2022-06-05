@@ -2,21 +2,19 @@
 
 namespace Tests\HTTP;
 
-use CodeIgniter\Test\FeatureTestCase;
+use CodeIgniter\Test\CIUnitTestCase;
+use CodeIgniter\Test\FeatureTestTrait;
 
-class NonAjaxRequestTest extends FeatureTestCase
+/**
+ * @internal
+ */
+final class NonAjaxRequestTest extends CIUnitTestCase
 {
+    use FeatureTestTrait;
+
     public function testRenderLayout()
     {
-        $routes = [
-            [ 'get', 'home', 'Home::index' ]
-        ];
-
-        ob_start();
-        $this->withRoutes($routes)
-            ->get('home');
-        $layout = ob_get_clean();
-
-        $this->assertRegExp('/<html>/', $layout);
+        $testResponse = $this->call('get', '/');
+        $this->assertMatchesRegularExpression('/<html>/', $testResponse->getBody());
     }
 }
