@@ -6,16 +6,19 @@ use App\Controllers\Home;
 use CodeIgniter\Test\CIUnitTestCase;
 use CodeIgniter\Test\ControllerTester;
 
-class HomeTest extends CIUnitTestCase
+/**
+ * @internal
+ */
+final class HomeTest extends CIUnitTestCase
 {
-	use ControllerTester;
+    use ControllerTester;
 
-	public function testIndex()
-	{
-		$result = $this->controller(Home::class)
-						->execute('index');
+    public function testIndex()
+    {
+        $result = $this->controller(Home::class)
+            ->execute('index');
 
-		$this->assertTrue($result->isOK());
-		$this->assertTrue($result->see('home'));
-	}
+        $this->assertTrue($result->isOK());
+        $this->assertTrue($result->see('home'));
+    }
 }

@@ -6,16 +6,19 @@ use App\Controllers\About;
 use CodeIgniter\Test\CIUnitTestCase;
 use CodeIgniter\Test\ControllerTester;
 
-class AboutTest extends CIUnitTestCase
+/**
+ * @internal
+ */
+final class AboutTest extends CIUnitTestCase
 {
-	use ControllerTester;
+    use ControllerTester;
 
-	public function testIndex()
-	{
-		$result = $this->controller(About::class)
-						->execute('index');
+    public function testIndex()
+    {
+        $result = $this->controller(About::class)
+            ->execute('index');
 
-		$this->assertTrue($result->isOK());
-		$this->assertTrue($result->see('I\'m a web developer. My name is ${ this.state.name }'));
-	}
+        $this->assertTrue($result->isOK());
+        $this->assertTrue($result->see('I\'m a web developer. My name is ${ this.state.name }'));
+    }
 }

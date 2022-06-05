@@ -6,16 +6,19 @@ use App\Controllers\Contact;
 use CodeIgniter\Test\CIUnitTestCase;
 use CodeIgniter\Test\ControllerTester;
 
-class ContactTest extends CIUnitTestCase
+/**
+ * @internal
+ */
+final class ContactTest extends CIUnitTestCase
 {
-	use ControllerTester;
+    use ControllerTester;
 
-	public function testIndex()
-	{
-		$result = $this->controller(Contact::class)
-						->execute('index');
+    public function testIndex()
+    {
+        $result = $this->controller(Contact::class)
+            ->execute('index');
 
-		$this->assertTrue($result->isOK());
-		$this->assertTrue($result->see('contact.'));
-	}
+        $this->assertTrue($result->isOK());
+        $this->assertTrue($result->see('contact.'));
+    }
 }
