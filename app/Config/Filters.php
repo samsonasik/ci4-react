@@ -1,7 +1,6 @@
 <?php namespace Config;
 
 use App\Filters\LayoutUsage;
-use App\Filters\NotFoundPage;
 use CodeIgniter\Config\BaseConfig;
 
 class Filters extends BaseConfig
@@ -12,7 +11,6 @@ class Filters extends BaseConfig
 		'csrf'     => \CodeIgniter\Filters\CSRF::class,
 		'toolbar'  => \CodeIgniter\Filters\DebugToolbar::class,
 		'honeypot' => \CodeIgniter\Filters\Honeypot::class,
-		'notfoundpage'   => NotFoundPage::class,
 		'layoutUsage' => LayoutUsage::class,
 	];
 
@@ -21,7 +19,6 @@ class Filters extends BaseConfig
 		'before' => [
 			//'honeypot'
 			// 'csrf',
-			'notfoundpage',
 			'layoutUsage',
 		],
 		'after'  => [
