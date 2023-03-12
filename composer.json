@@ -1,9 +1,8 @@
 {
 	"name": "samsonasik/ci4-react",
-	"type": "project",
 	"description": "CodeIgniter4 starter app with react.js Integration",
-	"homepage": "https://codeigniter.com",
 	"license": "MIT",
+	"type": "project",
 	"authors": [
 		{
 			"name": "Abdul Malik Ikhsan",
@@ -12,16 +11,22 @@
 			"role": "Developer"
 		}
 	],
+	"homepage": "https://codeigniter.com",
+	"support": {
+		"forum": "http://forum.codeigniter.com/",
+		"source": "https://github.com/codeigniter4/CodeIgniter4",
+		"slack": "https://codeigniterchat.slack.com"
+	},
 	"require": {
-		"php": "^7.4 || ~8.0.0 | ~8.1.0",
-		"codeigniter4/framework": "^4.2"
+		"php": "^7.4 || ~8.0.0 || ~8.1.0 || ~8.2.0",
+		"codeigniter4/framework": "^4.3.2"
 	},
 	"require-dev": {
 		"codeigniter/coding-standard": "^1.0",
 		"mikey179/vfsstream": "1.6.*",
+		"phpspec/prophecy-phpunit": "^2.0",
 		"phpunit/phpunit": "^9.0",
-		"squizlabs/php_codesniffer": "^3.1",
-		"phpspec/prophecy-phpunit": "^2.0"
+		"squizlabs/php_codesniffer": "^3.1"
 	},
 	"autoload": {
 		"psr-4": {
@@ -35,6 +40,11 @@
 			"Tests\\Support\\": "tests/_support"
 		}
 	},
+	"config": {
+		"platform": {
+			"php": "7.4.99"
+		}
+	},
 	"scripts": {
 		"post-update-cmd": [
 			"@composer dump-autoload"
@@ -42,10 +52,5 @@
 		"cs-check": "php-cs-fixer fix --dry-run --diff",
 		"cs-fix": "php-cs-fixer fix",
 		"test": "phpunit"
-	},
-	"support": {
-		"forum": "http://forum.codeigniter.com/",
-		"source": "https://github.com/codeigniter4/CodeIgniter4",
-		"slack": "https://codeigniterchat.slack.com"
 	}
 }
