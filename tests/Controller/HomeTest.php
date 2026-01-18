@@ -4,7 +4,6 @@ namespace Tests\Controller;
 
 use App\Controllers\Home;
 use CodeIgniter\Test\CIUnitTestCase;
-use CodeIgniter\Test\ControllerTester;
 use CodeIgniter\Test\ControllerTestTrait;
 
 /**
