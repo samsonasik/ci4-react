@@ -4,14 +4,14 @@ namespace Tests\Controller;
 
 use App\Controllers\Contact;
 use CodeIgniter\Test\CIUnitTestCase;
-use CodeIgniter\Test\ControllerTester;
+use CodeIgniter\Test\ControllerTestTrait;
 
 /**
  * @internal
  */
 final class ContactTest extends CIUnitTestCase
 {
-    use ControllerTester;
+    use ControllerTestTrait;
 
     public function testIndex()
     {
