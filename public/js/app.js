@@ -60,3 +60,9 @@ ReactDOM.render(
   ),
   document.getElementById('root')
 );
+
+
+// https://reactjs.org/docs/react-without-jsx.html
+// https://www.pluralsight.com/guides/just-plain-react
+// https://codepen.io/pshrmn/pen/YZXZqM?editors=1010
+// https://stackoverflow.com/questions/53527465/how-can-i-do-string-interpolation-in-a-string-variable-in-react
