@@ -19,9 +19,9 @@
     <script src="<?php echo 'https://unpkg.com/dompurify@2.0.12/dist/purify.'. (! $isDevelopment ? 'min.' : '') . 'js'; ?>"></script>
     <script src="<?php echo 'https://unpkg.com/html-react-parser@0.13.0/dist/html-react-parser.'. (! $isDevelopment ? 'min.' : '') . 'js'; ?>"></script>
 
-    <script src="<?php echo 'https://unpkg.com/@remix-run/router@1.21.0/dist/router.umd.' . (! $isDevelopment ? 'min' : '') . '.js'; ?>"></script>
-    <script src="<?php echo 'https://unpkg.com/react-router@6.28.1/dist/umd/react-router.' . (! $isDevelopment ? 'production.min' : 'development') . '.js'; ?>"></script>
-    <script src="<?php echo 'https://unpkg.com/react-router-dom@6.28.1/dist/umd/react-router-dom.' . (! $isDevelopment ? 'production.min' : 'development') . '.js'; ?>"></script>
+    <script src="<?php echo 'https://unpkg.com/@remix-run/router@1.21.0/dist/router.umd.' . (! $isDevelopment ? 'min.' : '') . 'js'; ?>"></script>
+    <script src="<?php echo 'https://unpkg.com/react-router@6.28.1/dist/umd/react-router.' . (! $isDevelopment ? 'production.min.' : 'development.') . 'js'; ?>"></script>
+    <script src="<?php echo 'https://unpkg.com/react-router-dom@6.28.1/dist/umd/react-router-dom.' . (! $isDevelopment ? 'production.min.' : 'development.') . 'js'; ?>"></script>
 
     <script src="<?php echo base_url($isDevelopment
             ? '/js/app.js'
