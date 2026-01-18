@@ -31,7 +31,7 @@ jobs:
         run: "composer cs-check"
       - name: "Run test suite"
         run: "XDEBUG_MODE=coverage vendor/bin/phpunit"
-      - if: matrix.php-versions == '8.0'
+      - if: matrix.php-versions == '8.4'
         name: Run mutation test
         env:
           INFECTION_BADGE_API_KEY: ${{ secrets.INFECTION_BADGE_API_KEY }}
@@ -39,13 +39,12 @@ jobs:
         run: |
           composer require --dev infection/infection
           XDEBUG_MODE=coverage vendor/bin/infection
-      - if: matrix.php-versions == '8.0' && github.event.pull_request.head.repo.full_name == 'samsonasik/ci4-react'
-        name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1
+      - name: Upload coverage to Codecov
+        if: github.event.pull_request.head.repo.full_name == 'samsonasik/ci4-react' && matrix.php-versions == '8.4'
+        uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          file: ./build/logs/clover.xml
+          files: ./build/logs/clover.xml
           flags: tests
           name: codecov-umbrella
-          yml: ./codecov.yml
           fail_ci_if_error: true
