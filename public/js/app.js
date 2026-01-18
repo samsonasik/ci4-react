@@ -55,7 +55,12 @@ const App = () => createElement(
 ReactDOM.render(
   createElement(
     BrowserRouter,
-    null,
+    {
+      future: {
+        v7_startTransition: true,
+        v7_relativeSplatPath: true
+      }
+    },
     createElement(App, null)
   ),
   document.getElementById('root')
